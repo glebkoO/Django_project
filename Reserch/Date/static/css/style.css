@@ -1,13 +1,41 @@
-body {
-  width: 500px;
-  margin: 0 auto;
-
+body,html {
+  margin: 0;
+  font-family: sans-serif;
 }
 
-p {
-    background-color: rgb(207,232,220);
-    border: 2px solid rgb(79,185,227);
-    padding: 10px;
-    margin: 10px;
-    border-radius: 5px;
+ul {
+  padding: 0;
+  width: 100%;
+}
+
+li {
+  display: inline;
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+  display: inline-block;
+  width: 19.5%;
+  margin-right: 0.625%;
+  text-align: center;
+  line-height: 3;
+  color: black;
+}
+
+li:last-child a {
+  margin-right: 0;
+}
+
+a:link, a:visited, a:focus {
+  background: #777799;
+}
+
+a:hover {
+  background: teal;
+}
+
+a:active {
+  background: rgb(153, 102, 153);
+  color: white;
 }
