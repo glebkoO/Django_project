@@ -4,5 +4,28 @@
 {% block css_additional %} <link rel="stylesheet" href="{% static 'css/style.css' %}"> {% endblock %}
 {% block content %}
 
-<h1> здесь будет находиться список всех исследуемых </h1>
+<h1> данные о тестировании интеллекта  по методике Д.Векслера </h1>
+<h3> Сведенная таблица </h3>
+
+<h4> Найти результат </h4>
+<br>
+<form action="{% url 'search_results' %}" method="get">
+    <input name="case" type="text" placeholder="Фамилия">
+    <input type="submit" value="ok!">
+</form>
+<table>
+    {% for d in dates %}
+    <tr>
+        <td>{{d.id}} </td>
+        <br>
+        <td>{{d.created|date:"SHORT_DATE_FORMAT"}}</td>
+        <br>
+        <td>{{d.first_name}} </td>
+        <br>
+        <td>{{d.age}} </td>
+        <br>
+        <td>{{d.iq}} </td>
+     </tr>
+{% endfor %}
+</table>
 {% endblock %}
