@@ -1,3 +1,4 @@
+{% extends 'Date/base.html' %}
 {% load static %}
 {% block Title%} search_results {% endblock %}
 {% block css_additional %} <link rel="stylesheet" href="{% static 'css/style.css' %}"> {% endblock %}
@@ -13,7 +14,7 @@
         {% for data in object_list %}
 
     <li>
-    {{data.id}} <br> {{data.first_name}} <br> {{data.last_name}}: {{data.iq}}
+    {{data.id}} <br> {{data.name}}: {{data.age}} {{data.iq}}
   </li>
      {% empty %} Ничего не найдено
 {% endfor %} {% endif %}

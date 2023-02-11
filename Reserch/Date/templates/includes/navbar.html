@@ -1,8 +1,11 @@
 
 <nav>
     <ul>
-   <li><a href="{% url 'home' %}">  главная </a></li><li><a href="#">  мой кабинет  </a></li>
+   <li><a href="{% url 'home' %}">  главная </a></li><li><a href="#"> кабинет исследователя </a></li>
    <li><a href="#"> актуальное </a></li>
-<!--   <li><a href="#">  Регистрация  </a></li>-->
+    <li><a href="{% url 'register' %}">  регистрация  </a></li>
+    <li><a href="{ % url 'login' % }"> войти </a></li>
+    <li><a href="{ % url 'logout' % }"> выход </a></li>
+    
     </ul>
 </nav>
