@@ -1,6 +1,7 @@
 {% extends "Date/base.html" %}
 {% block content %}
-    <div class="content-section">
+<h1> Log in </h1>
+    <div class="conteiner text-center">
         <form method="POST">
             {% csrf_token %}
             <fieldset class="form-group">
@@ -16,5 +17,5 @@
                 Нужен аккаунт? <a class="ml-2" href="{% url 'register' %}">Регистрация</a>
             </small>
         </div>
-    </div>
+    </div> -->
 {% endblock content %}
