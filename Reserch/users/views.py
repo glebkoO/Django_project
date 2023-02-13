@@ -1,8 +1,10 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from .forms import UserRegisterForm
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
-
+from django.views.generic import CreateView
+from django.urls import reverse_lazy
 
 def register(request):
 	if request.method == 'POST':
@@ -14,8 +16,14 @@ def register(request):
 			return redirect('login')
 	else:
 		form = UserRegisterForm()
-	return render(request, 'users/register.html', {'form': form})
+	return render(request, 'registration/register.html', {'form': form})
 	
 @login_required
 def profile(request):
-	return render(request, 'users/profile.html')
+	return render(request, 'registration/profile.html')
+
+def login_user(request):
+	return render(request, 'registration/login.html', {})
+
+def logout_user(request):
+	pass

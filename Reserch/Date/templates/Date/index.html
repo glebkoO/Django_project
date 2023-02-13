@@ -6,14 +6,15 @@
 
 <h1> Данные о тестировании интеллекта  по методике Д.Векслера </h1>
 <h3> Сведенная таблица </h3>
-
+<h1> Информация для участников </h1>
+<p>     Здесь вы можете узнать результат тестирования IQ, если вам известен ваш линый id </p>
 <h4> Найти результат </h4>
 <form action="{% url 'search_results' %}" method="get">
     <input name="case" type="text" placeholder="Фамилия (c большой) или ID">
     <input type="submit" value="ok!">
 </form>
 <table>
-    {% for d in dates %}
+
     <tr>
         <td>{{d.id}} </td>
         
@@ -23,7 +24,8 @@
         
         <td>{{d.age}} </td>
         <td>{{d.iq}} </td>
+        <td>{{d.resercher}}</td>
      </tr>
-{% endfor %}
+
 </table>
 {% endblock %}

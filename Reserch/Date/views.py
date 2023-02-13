@@ -1,9 +1,9 @@
 from django.contrib.auth.forms import UserCreationForm
 from django.http import request
 from django.shortcuts import render, redirect
-
 from django.views.generic import ListView
 from django.db.models import Q
+from .models import *
 
 
 from . models import *

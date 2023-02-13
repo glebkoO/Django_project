@@ -1,11 +1,17 @@
 
 <nav>
     <ul>
-   <li><a href="{% url 'home' %}">  главная </a></li><li><a href="#"> кабинет исследователя </a></li>
+        {% if user.is_authenticated %}
+        <li> Исследователь: {{User.get_username}} </li>
+        <li><a href="{% url 'logout' %}?next={{request.path}}"</a> выход </li>
+         {% else %}   
+         <li><a href="{ % url 'login' % }?next={{request.path}}"> вход </a></li>
+        </ul>
+        {% endif %}
+   <li><a href="{% url 'home' %}">  главная </a></li>
    <li><a href="#"> актуальное </a></li>
     <li><a href="{% url 'register' %}">  регистрация  </a></li>
-    <li><a href="{ % url 'login' % }"> войти </a></li>
-    <li><a href="{ % url 'logout' % }"> выход </a></li>
     
-    </ul>
+</ul>
+    
 </nav>
