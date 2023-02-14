@@ -1,0 +1,21 @@
+{% extends 'blog/baceblog.html' %}
+{% block title %} важное {% endblock %}
+    {% block css_additional %} {% endblock %}
+
+{% block content %}
+<h1> События </h1>
+<form action="" method="post">
+    {% csrf_token %}
+    <input type="submit" value="добавить событие">
+   <p> {{form.context}} </p>
+    </form>
+{% for i in blog %}
+<div>
+   <p>{{ i.title }}</p>
+    <p> {{ i.context }}</p>
+    <p> {{user.username}} </p>
+
+</div>
+{% endfor %}
+
+{% endblock %}

@@ -1,25 +1,34 @@
 <!DOCTYPE html>
-{% load static%}
+{% load static %}
 <html lang="en">
 <head>
 
     <meta charset="UTF-8">
     <title>{% block Title %} {% endblock %} </title>
     {% block css_additional %} {% endblock %}
-<link rel="stylesheet" href="{% static urls 'css/style.css' %}">
+
+
+<link rel="stylesheet" href="{% static urls '/Date/css/style.css' %}">
+
 </head>
-<body>
+<div class="navibar">
 {% include 'includes/navbar.html' %}
-{% if messages %}
+	</div>
+<body>
+
+<div class="left">
+	<img src="{% static urls 'static/Date/img/homeim.jpg' %}" alt="" srcset="">
+	</div>
+<div class="right">
+    {% if messages %}
         	{% for message in messages %}
           	<div class="alert alert-{{ message.tags }}">
             	{{ message }}
           	</div>
         	{% endfor %}
 {% endif %}
-{% block content %}
-{% endblock %}
+	{% block content %} {% endblock %}
+</div>
 
-{% include 'includes/navbar.html' %}
-<body>
+</body>
 </html>

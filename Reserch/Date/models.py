@@ -27,9 +27,8 @@ class Date(models.Model):
     IQN = models.IntegerField(verbose_name='IQневерб')
     iq = models.IntegerField(verbose_name='IQобщ')
     slug = models.SlugField(unique=True)
-    resercher = models.ForeignKey(User, on_delete=models.PROTECT, blank=True, verbose_name='Исследователь')
-    # https://developer.mozilla.org/ru/docs/Learn/Server-side/Django/Authentication
-    #https://proglib.io/p/django-s-nulya-chast-2-registraciya-avtorizaciya-ogranichenie-dostupa-2022-06-08
+    resercher = models.CharField(max_length= 200, blank=True, null=True, verbose_name='Исследователь')
+
     class Meta:
         verbose_name = 'исследуемый'
         verbose_name_plural = 'исследуемые'
@@ -38,5 +37,9 @@ class Date(models.Model):
 
     def get_absolute_url(self):
         return reverse('myurl', kwargs={'name': self.slug, 'id': self.pk})
-# class User(models.Mode):
-#     name = models.CharField(max_length=200, db_index=True)
+# class Profile(models.Model):
+#     user = models.OneToOneField(User, on_delete=models.CASCADE)
+#     image = models.ImageField(default='default.jpg', upload_to='profile_pics')
+#
+#     def __str__(self):
+#         return f'{self.user.username} Profile'

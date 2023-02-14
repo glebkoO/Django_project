@@ -1,8 +1,27 @@
-body,html {
+div {
+display: block}
+.right {display: block;
+width: 30%
+background-color: white;
+}
+.left {position: absolute;
+left: 0;
+top: 0
+display: block;
+width: 70%;
+background-color: (0, 10, 10)
+}
+html {background-color: white
+}
+body {background-color: white;
   margin: 0;
+  padding: 100px;
   font-family: sans-serif;
 }
-
+.navibar {background-color: white
+}
+img {
+}
 ul {
   padding: 0;
   width: 100%;
@@ -12,7 +31,7 @@ li {
   display: inline;
 }
 
-a {
+a {color: red;
   outline: none;
   text-decoration: none;
   display: inline-block;

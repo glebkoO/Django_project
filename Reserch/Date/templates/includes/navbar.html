@@ -1,17 +1,18 @@
-
+{% load static %}
+<link rel="stylesheet" href="{% static 'Date/css/nav_style.css' %}">
 <nav>
-    <ul>
+    <ul class="navbar">
+     <img src="{% static 'Date/img/icon.png' %}">
+        <li> <a href="{% url 'home' %}">  главная </a></li>
+
         {% if user.is_authenticated %}
-        <li> Исследователь: {{User.get_username}} </li>
-        <li><a href="{% url 'logout' %}?next={{request.path}}"</a> выход </li>
-         {% else %}   
-         <li><a href="{ % url 'login' % }?next={{request.path}}"> вход </a></li>
-        </ul>
+        <li> <a href="{% url 'cabinet' %}"> кабинет </a></li>
+        <li><a href="{% url 'main' %}"> важное </a> </li>
+        <li><a href="{% url 'logout' %}?next={{request.path}}"> выход </a> </li>
+        <li> -> {{User.get_username}} </li>
+         {% else %}
+        <li><a href="{% url 'register' %}?next={{request.path}}">  регистрация  </a></li>
+         <li><a href="{% url 'login' %}?next={{request.path}}"> вход </a></li>
         {% endif %}
-   <li><a href="{% url 'home' %}">  главная </a></li>
-   <li><a href="#"> актуальное </a></li>
-    <li><a href="{% url 'register' %}">  регистрация  </a></li>
-    
-</ul>
-    
+            </ul>
 </nav>

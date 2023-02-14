@@ -6,9 +6,13 @@
         <img class="rounded-circle account-img" src="{{ user.profile.image.url }}">
         <div class="media-body">
           <h2 class="account-heading">{{ user.username }}</h2>
-          <p class="text-secondary">{{ user.email }}</p>
+          <p> class="text-secondary">{{ user.email }}</p>
         </div>
       </div>
-      <!-- Здесь будет форма -->
+        <form action="{% url '/' %}" method="post">
+            {% csrf_token %}
+  {{ form.as_table }}
+  <button type="submit"> Внести данные </button>
+</form>
     </div>
-{% endblock content %}
+{% endblock %}

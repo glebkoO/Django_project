@@ -1,11 +1,11 @@
-{% extends 'Date/base.html' %}
 {% load crispy_forms_tags %}
 {% block content %}
+
     <div class="content-section">
         <form method="POST">
             {% csrf_token %}
             <fieldset class="form-group">
-                <legend class="border-bottom mb-4">Добро пожаловать на платформу проекта исследование интеллекта представителей белорусской популяции</legend>
+                <legend>Добро пожаловать на платформу проекта "Исследование интеллекта представителей белорусской популяции" </legend>
                 {{ form|crispy }}
             </fieldset>
             <div class="form-group">
@@ -14,7 +14,7 @@
         </form>
         <div class="border-top pt-3">
             <small class="text-muted">
-                Уже есть аккаунт? <a class="ml-2" href="#">Вход</a>
+                Уже есть аккаунт? <a class="ml-2" href="{% url 'login' %}"> Вход </a>
             </small>
         </div>
     </div>

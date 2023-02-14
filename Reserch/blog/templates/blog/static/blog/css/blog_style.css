@@ -1,0 +1,60 @@
+div {
+display: block}
+.right {display: block;
+width: 30%
+background-color: white;
+}
+.left {position: absolute;
+left: 0;
+top: 0
+display: block;
+width: 70%;
+background-color: (0, 10, 10)
+}
+html {background-color: white
+}
+body {background-color: white;
+  margin: 0;
+  padding: 100px;
+  font-family: sans-serif;
+}
+.navibar {background-color: white
+}
+img {
+}
+ul {
+  padding: 0;
+  width: 100%;
+}
+
+li {
+  display: inline;
+}
+
+a {color: red;
+  outline: none;
+  text-decoration: none;
+  display: inline-block;
+  width: 19.5%;
+  margin-right: 0.625%;
+  text-align: center;
+  line-height: 3;
+  color: black;
+}
+
+li:last-child a {
+  margin-right: 0;
+}
+
+a:link, a:visited, a:focus {
+  background: #777799;
+}
+
+a:hover {
+  background: teal;
+}
+
+a:active {
+  background: rgb(153, 102, 153);
+  color: white;
+}

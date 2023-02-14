@@ -1,8 +1,8 @@
 {% load static %}
-<link rel="stylesheet" href="{% static 'Date/css/nav_style.css' %}">
+<link rel="stylesheet" href="{% static 'blog/css/blog_style.css' %}">
 <nav>
     <ul class="navbar">
-     <img src="{% static 'Date/img/icon.png' %}">
+     <img src="{% static urls 'blog/imagination/icon.png' %}">
         <li> <a href="{% url 'home' %}">  главная </a></li>
 
         {% if user.is_authenticated %}

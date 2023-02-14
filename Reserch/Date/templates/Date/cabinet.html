@@ -1,0 +1,25 @@
+{% extends 'Date/base.html' %}
+{% load static %}
+{% block Title %} Кабинет пользователя {% endblock %}
+{% block css_additional %}  <link rel="stylesheet" href="{% static 'Date/css/style.css' %}"> {% endblock %}
+{% block content %}
+
+{% if user.is_authenticated %}
+<h2 id="cabinet"> Приветствую, {{user.username}} </h2>
+<div class="alert alert-danger" role="alert">
+    <p> Это твой личный кабинет!
+    Результаты тестирования по тесту Векслера необходимо внести в форму. После того как ты ее заполнишь и нажмешь кнопку 'внести данные' вся информация автоматически сохранится в базу данных. и отобразится на главной странице"
+</div>
+    </div>
+        <form action="{% url 'home' %}" method="post">
+            {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit"> Внести данные </button>
+</form>
+    </div>
+
+
+{% else %}
+<p> Вы не авторизировались. Функционал сайта ограничен для посетителей! </p>
+{% endif %}
+{% endblock %}
