@@ -1,8 +1,8 @@
 div {
 display: block}
 .right {display: block;
-width: 30%
-background-color: white;
+width: 30%;
+background-color: rgb(230; 245; 249)
 }
 .left {position: absolute;
 left: 0;
@@ -20,8 +20,29 @@ body {background-color: white;
 }
 .navibar {background-color: white
 }
-img {
+img {width: 40px
 }
+ul.nav{background: violet;
+                margin-left: 0px;
+                padding-left: 0px;
+                list-style: none;
+            }
+            .nav li {
+                float: left;
+            }
+            ul.nav a {
+                display: block;
+                width: 5em;
+                padding:10px;
+                margin: 0 5px;
+                text-decoration: none;
+                color: #333;
+                text-align: center;
+            }
+            ul.nav a:hover{
+                background-color: #333;
+                color: #f4f4f4;
+            }
 ul {
   padding: 0;
   width: 100%;

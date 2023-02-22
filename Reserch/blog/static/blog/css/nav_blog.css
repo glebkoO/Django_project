@@ -1,0 +1,24 @@
+
+img {width: 10%
+}
+ul.nav{background: violet;
+                margin-left: 0px;
+                padding-left: 0px;
+                list-style: none;
+            }
+            .nav li {
+                float: left;
+            }
+            ul.nav a {
+                display: block;
+                width: 5em;
+                padding:10px;
+                margin: 0 5px;
+                text-decoration: none;
+                color: #333;
+                text-align: center;
+            }
+            ul.nav a:hover{
+                background-color: #333;
+                color: #f4f4f4;
+            }

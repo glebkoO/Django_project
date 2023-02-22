@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
 
     <title>{% block title %} {% endblock %}</title>
-    {% block css_additional %} {% endblock %}
-<link rel="stylesheet" href="{% static urls 'blog/css/blog_style.css' %}">
+    {% block css_additional %} <link rel="stylesheet" href="{% static urls 'blog/css/blog_style.css' %}">
+    <link rel="stylesheet" href="{% static urls 'blog/css/nav_blog.css% }">
+    {% endblock %}
+
 </head>
 <body>
-{% include 'includes/nav_blog.css' %}
+{% include 'includes/nav_blog.html' %}
 <!--        <nav>-->
 <!--    <ul class="navbar">-->
 <!--     <img src="{% static 'Date/img/icon.png' %}">-->

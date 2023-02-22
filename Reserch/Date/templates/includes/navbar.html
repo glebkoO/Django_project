@@ -7,7 +7,7 @@
 
         {% if user.is_authenticated %}
         <li> <a href="{% url 'cabinet' %}"> кабинет </a></li>
-        <li><a href="{% url 'main' %}"> важное </a> </li>
+        <li><a href="{% url 'main' %}"> важно! </a> </li>
         <li><a href="{% url 'logout' %}?next={{request.path}}"> выход </a> </li>
         <li> -> {{User.get_username}} </li>
          {% else %}

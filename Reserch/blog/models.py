@@ -2,7 +2,7 @@ from django.db import models
 
 class Desk(models.Model):
     title = models.CharField(max_length=100, blank=True, null=True, verbose_name='Тема')
-    context = models.TextField(max_length=250, verbose_name='Сообщение')
+    context = models.TextField(max_length=250, verbose_name='Сообщение', blank=True, null=True)
     date = models.DateTimeField(auto_now=True)
 
     class Meta:
